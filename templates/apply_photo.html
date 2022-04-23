@@ -808,7 +808,7 @@
     <header><h1 class="page-title">사진 업로드하기</h1></header>
     <div class="page-body"><p id="f07eca24-a1c7-4b34-af43-e1a6166025a3" class="">사진 업로드하기</p>
         <p id="ce698a96-cf0e-4d67-9278-dfa2d5b736c8" class="">
-        <form action="POST" enctype="multipart/form-data" action="{{ url_for('upload_done') }}">
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_done') }}">
             <input type="file" name="file">
             <input type="submit">
         </form>
