@@ -1,4 +1,5 @@
-index,location,claness,built_in
+index,location,cleaness,built_in
 0,테스트1,True,테스트1 트루
 1,테스트2,False,테스트2 팔스
 2,서울,True,옷장
+3,용인,True,ㅎㅎ

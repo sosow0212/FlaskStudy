@@ -1,9 +1,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>집 등록하기</title>
     <style>
-        /* cspell:disable-file */
         /* webkit printing magic: print all background colors */
         html {
             -webkit-print-color-adjust: exact;
@@ -289,31 +289,6 @@
             margin-right: 1em;
         }
 
-        .simple-table {
-            margin-top: 1em;
-            font-size: 0.875rem;
-            empty-cells: show;
-        }
-
-        .simple-table td {
-            height: 29px;
-            min-width: 120px;
-        }
-
-        .simple-table th {
-            height: 29px;
-            min-width: 120px;
-        }
-
-        .simple-table-header-color {
-            background: rgb(247, 246, 243);
-            color: black;
-        }
-
-        .simple-table-header {
-            font-weight: 500;
-        }
-
         time {
             opacity: 0.5;
         }
@@ -351,7 +326,7 @@
             display: block;
             object-fit: cover;
             width: 100%;
-            max-height: 30vh;
+            height: 30vh;
         }
 
         .page-header-icon {
@@ -421,11 +396,6 @@
             padding: 1.5em 1em;
         }
 
-        .code-wrap {
-            white-space: pre-wrap;
-            word-break: break-all;
-        }
-
         .code > code {
             background: none;
             padding: 0;
@@ -493,15 +463,15 @@
         }
 
         .sans {
-            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
         }
 
         .code {
-            font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
         }
 
         .serif {
-            font-family: Lyon-Text, Georgia, ui-serif, serif;
+            font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif;
         }
 
         .mono {
@@ -509,152 +479,94 @@
         }
 
         .pdf .sans {
-            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
-        }
-
-        .pdf:lang(zh-CN) .sans {
-            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
-        }
-
-        .pdf:lang(zh-TW) .sans {
-            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
-        }
-
-        .pdf:lang(ko-KR) .sans {
-            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR';
         }
 
         .pdf .code {
-            font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-        }
-
-        .pdf:lang(zh-CN) .code {
-            font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
-        }
-
-        .pdf:lang(zh-TW) .code {
-            font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
-        }
-
-        .pdf:lang(ko-KR) .code {
-            font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+            font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR';
         }
 
         .pdf .serif {
-            font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
-        }
-
-        .pdf:lang(zh-CN) .serif {
-            font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
-        }
-
-        .pdf:lang(zh-TW) .serif {
-            font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
-        }
-
-        .pdf:lang(ko-KR) .serif {
-            font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+            font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR';
         }
 
         .pdf .mono {
-            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-        }
-
-        .pdf:lang(zh-CN) .mono {
-            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
-        }
-
-        .pdf:lang(zh-TW) .mono {
-            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
-        }
-
-        .pdf:lang(ko-KR) .mono {
-            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR';
         }
 
         .highlight-default {
-            color: rgba(55, 53, 47, 1);
         }
 
         .highlight-gray {
-            color: rgba(120, 119, 116, 1);
-            fill: rgba(120, 119, 116, 1);
+            color: rgb(155, 154, 151);
         }
 
         .highlight-brown {
-            color: rgba(159, 107, 83, 1);
-            fill: rgba(159, 107, 83, 1);
+            color: rgb(100, 71, 58);
         }
 
         .highlight-orange {
-            color: rgba(217, 115, 13, 1);
-            fill: rgba(217, 115, 13, 1);
+            color: rgb(217, 115, 13);
         }
 
         .highlight-yellow {
-            color: rgba(203, 145, 47, 1);
-            fill: rgba(203, 145, 47, 1);
+            color: rgb(223, 171, 1);
         }
 
         .highlight-teal {
-            color: rgba(68, 131, 97, 1);
-            fill: rgba(68, 131, 97, 1);
+            color: rgb(15, 123, 108);
         }
 
         .highlight-blue {
-            color: rgba(51, 126, 169, 1);
-            fill: rgba(51, 126, 169, 1);
+            color: rgb(11, 110, 153);
         }
 
         .highlight-purple {
-            color: rgba(144, 101, 176, 1);
-            fill: rgba(144, 101, 176, 1);
+            color: rgb(105, 64, 165);
         }
 
         .highlight-pink {
-            color: rgba(193, 76, 138, 1);
-            fill: rgba(193, 76, 138, 1);
+            color: rgb(173, 26, 114);
         }
 
         .highlight-red {
-            color: rgba(212, 76, 71, 1);
-            fill: rgba(212, 76, 71, 1);
+            color: rgb(224, 62, 62);
         }
 
         .highlight-gray_background {
-            background: rgba(241, 241, 239, 1);
+            background: rgb(235, 236, 237);
         }
 
         .highlight-brown_background {
-            background: rgba(244, 238, 238, 1);
+            background: rgb(233, 229, 227);
         }
 
         .highlight-orange_background {
-            background: rgba(251, 236, 221, 1);
+            background: rgb(250, 235, 221);
         }
 
         .highlight-yellow_background {
-            background: rgba(251, 243, 219, 1);
+            background: rgb(251, 243, 219);
         }
 
         .highlight-teal_background {
-            background: rgba(237, 243, 236, 1);
+            background: rgb(221, 237, 234);
         }
 
         .highlight-blue_background {
-            background: rgba(231, 243, 248, 1);
+            background: rgb(221, 235, 241);
         }
 
         .highlight-purple_background {
-            background: rgba(244, 240, 247, 0.8);
+            background: rgb(234, 228, 242);
         }
 
         .highlight-pink_background {
-            background: rgba(249, 238, 243, 0.8);
+            background: rgb(244, 223, 235);
         }
 
         .highlight-red_background {
-            background: rgba(253, 235, 236, 1);
+            background: rgb(251, 228, 228);
         }
 
         .block-color-default {
@@ -663,131 +575,131 @@
         }
 
         .block-color-gray {
-            color: rgba(120, 119, 116, 1);
-            fill: rgba(120, 119, 116, 1);
+            color: rgba(55, 53, 47, 0.6);
+            fill: rgba(55, 53, 47, 0.6);
         }
 
         .block-color-brown {
-            color: rgba(159, 107, 83, 1);
-            fill: rgba(159, 107, 83, 1);
+            color: rgb(100, 71, 58);
+            fill: rgb(100, 71, 58);
         }
 
         .block-color-orange {
-            color: rgba(217, 115, 13, 1);
-            fill: rgba(217, 115, 13, 1);
+            color: rgb(217, 115, 13);
+            fill: rgb(217, 115, 13);
         }
 
         .block-color-yellow {
-            color: rgba(203, 145, 47, 1);
-            fill: rgba(203, 145, 47, 1);
+            color: rgb(223, 171, 1);
+            fill: rgb(223, 171, 1);
         }
 
         .block-color-teal {
-            color: rgba(68, 131, 97, 1);
-            fill: rgba(68, 131, 97, 1);
+            color: rgb(15, 123, 108);
+            fill: rgb(15, 123, 108);
         }
 
         .block-color-blue {
-            color: rgba(51, 126, 169, 1);
-            fill: rgba(51, 126, 169, 1);
+            color: rgb(11, 110, 153);
+            fill: rgb(11, 110, 153);
         }
 
         .block-color-purple {
-            color: rgba(144, 101, 176, 1);
-            fill: rgba(144, 101, 176, 1);
+            color: rgb(105, 64, 165);
+            fill: rgb(105, 64, 165);
         }
 
         .block-color-pink {
-            color: rgba(193, 76, 138, 1);
-            fill: rgba(193, 76, 138, 1);
+            color: rgb(173, 26, 114);
+            fill: rgb(173, 26, 114);
         }
 
         .block-color-red {
-            color: rgba(212, 76, 71, 1);
-            fill: rgba(212, 76, 71, 1);
+            color: rgb(224, 62, 62);
+            fill: rgb(224, 62, 62);
         }
 
         .block-color-gray_background {
-            background: rgba(241, 241, 239, 1);
+            background: rgb(235, 236, 237);
         }
 
         .block-color-brown_background {
-            background: rgba(244, 238, 238, 1);
+            background: rgb(233, 229, 227);
         }
 
         .block-color-orange_background {
-            background: rgba(251, 236, 221, 1);
+            background: rgb(250, 235, 221);
         }
 
         .block-color-yellow_background {
-            background: rgba(251, 243, 219, 1);
+            background: rgb(251, 243, 219);
         }
 
         .block-color-teal_background {
-            background: rgba(237, 243, 236, 1);
+            background: rgb(221, 237, 234);
         }
 
         .block-color-blue_background {
-            background: rgba(231, 243, 248, 1);
+            background: rgb(221, 235, 241);
         }
 
         .block-color-purple_background {
-            background: rgba(244, 240, 247, 0.8);
+            background: rgb(234, 228, 242);
         }
 
         .block-color-pink_background {
-            background: rgba(249, 238, 243, 0.8);
+            background: rgb(244, 223, 235);
         }
 
         .block-color-red_background {
-            background: rgba(253, 235, 236, 1);
+            background: rgb(251, 228, 228);
         }
 
-        .select-value-color-pink {
-            background-color: rgba(245, 224, 233, 1);
-        }
-
-        .select-value-color-purple {
-            background-color: rgba(232, 222, 238, 1);
-        }
-
-        .select-value-color-green {
-            background-color: rgba(219, 237, 219, 1);
+        .select-value-color-default {
+            background-color: rgba(206, 205, 202, 0.5);
         }
 
         .select-value-color-gray {
-            background-color: rgba(227, 226, 224, 1);
-        }
-
-        .select-value-color-opaquegray {
-            background-color: rgba(255, 255, 255, 0.0375);
-        }
-
-        .select-value-color-orange {
-            background-color: rgba(250, 222, 201, 1);
+            background-color: rgba(155, 154, 151, 0.4);
         }
 
         .select-value-color-brown {
-            background-color: rgba(238, 224, 218, 1);
+            background-color: rgba(140, 46, 0, 0.2);
         }
 
-        .select-value-color-red {
-            background-color: rgba(255, 226, 221, 1);
+        .select-value-color-orange {
+            background-color: rgba(245, 93, 0, 0.2);
         }
 
         .select-value-color-yellow {
-            background-color: rgba(253, 236, 200, 1);
+            background-color: rgba(233, 168, 0, 0.2);
+        }
+
+        .select-value-color-green {
+            background-color: rgba(0, 135, 107, 0.2);
         }
 
         .select-value-color-blue {
-            background-color: rgba(211, 229, 239, 1);
+            background-color: rgba(0, 120, 223, 0.2);
+        }
+
+        .select-value-color-purple {
+            background-color: rgba(103, 36, 222, 0.2);
+        }
+
+        .select-value-color-pink {
+            background-color: rgba(221, 0, 129, 0.2);
+        }
+
+        .select-value-color-red {
+            background-color: rgba(255, 0, 26, 0.2);
         }
 
         .checkbox {
             display: inline-flex;
             vertical-align: text-bottom;
-            width: 16px;
-            height: 16px;
+            width: 16;
+            height: 16;
             background-size: 16px;
             margin-left: 2px;
             margin-right: 5px;
@@ -804,18 +716,20 @@
     </style>
 </head>
 <body>
-<article id="98bb146e-5792-45ba-b462-2293ae582d9f" class="page sans">
+<article id="1b9e81bc-931d-482c-8ee9-c77f8aad47e5" class="page sans">
     <header><h1 class="page-title">집 등록하기</h1></header>
-    <div class="page-body">
-        <p id="3850a37d-5cc8-42e9-96eb-64d9433a382b" class="">
+    <div class="page-body"><p id="185600bd-85f0-4d81-9b3d-c8ee1e864f53" class="">
         <form action="/applyphoto" method="get">
-            <input type="text" placeholder="위치를 입력하세요." name="location" required>
-            <input type="checkbox" value="clean" name="clean">
-            <textarea name="built" id="빌트인 항목" cols="45" rows="4" required placeholder="빌트인 항목"></textarea>
-            <button>사진 이어서 입력받기</button>
+            <input placeholder="위치를 입력하세요" required name="location">
+            <input type="checkbox" name="clean" value="clean">
+            <textarea name="built" placeholder="빌트인 항목" cols="45" rows="4" required/></textarea>
+            <button>사진 이어서 입력하기</button>
+
+
+            </button>
         </form>
-        </p>
-    </div>
+        </p><p id="7134632e-5f16-4d49-ac7e-1a567e9fe76c" class="">
+        </p></div>
 </article>
 </body>
 </html>
